@@ -29,11 +29,14 @@ function TaskProvider(props) {
   }
 
   const addTask = (text) => {
-    const newTasks = [...tasks];
-    newTasks.push({
-      completed: false,
-      text,
-    });
+    const newTasks = [
+      {
+        completed: false,
+        text,
+      },
+      ...tasks,
+    ];
+    newTasks.push();
     saveTasks(newTasks);
   };
 
