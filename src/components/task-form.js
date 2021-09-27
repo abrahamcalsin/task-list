@@ -15,9 +15,11 @@ function TaskForm() {
   };
 
   const onSubmit = (event) => {
-    event.preventDefault();
-    addTask(newTaskValue);
+    if (newTaskValue.length >= 1) {
+      addTask(newTaskValue);
+    }
     setOpenModal(false);
+    event.preventDefault();
   };
 
   return (

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function CreateTaskButton(props) {
   const onClickButton = () => {
-    props.setOpenModal((prevState) => !prevState);
+    props.setOpenModal(true);
   };
 
   return (
